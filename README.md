@@ -1,1 +1,1 @@
-View site here: <https://mgnavs.github.io/newuportfolio/>.
+View site here via desktop for the best experience: <https://mgnavs.github.io/newuportfolio/>.
