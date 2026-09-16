@@ -1070,6 +1070,16 @@
     announcementTrackBottom.innerHTML = ('<span>' + ANNOUNCEMENT_TEXT + '</span>').repeat(8);
   }
 
+  function restartTickerAnimation(){ 
+    [announcementTrack, announcementTrackBottom].forEach((el) => { 
+      if (!el) return; el.style.animation = 'none'; 
+      void el.offsetHeight; el.style.animation = ''; 
+    }); 
+  } 
+  restartTickerAnimation(); window.addEventListener('pageshow', (event) => { 
+    if (event.persisted) restartTickerAnimation(); 
+  });
+  
   // ---------- Loading screen ----------
   window.addEventListener('load', () => {
     setTimeout(() => {
